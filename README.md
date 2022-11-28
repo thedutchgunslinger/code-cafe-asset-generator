@@ -9,15 +9,6 @@ Welcome to your Remotion project!
 
 **Install Dependencies**
 
-om de tekst aan te passen ga naar 
-```console
-my-video\src\codecafeLowerThird\lowerThird\index.tsx
-```
-hier kan je de tekst aanpasssen op regel 93: 
-```tsx
-<Bar width={expand} opacity={fadeIn} title="Test Title"></Bar>
-```
-
 ```console
 npm i
 ```
@@ -26,6 +17,15 @@ npm i
 
 ```console
 npm start
+```
+  **pas tekst aan**
+om de tekst aan te passen ga naar 
+```console
+my-video\src\codecafeLowerThird\lowerThird\index.tsx
+```
+hier kan je de tekst aanpasssen op regel 93: 
+```tsx
+<Bar width={expand} opacity={fadeIn} title="Test Title"></Bar>
 ```
 
 **Render video**
