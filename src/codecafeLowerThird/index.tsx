@@ -11,7 +11,6 @@ const BackgroundContainer = styled.div`
     flex-diraction: column;
     justify-content: center;
     align-items: center;
-    background-color: #111;
 `;
 
 const CenteredContainer = styled.div`
