@@ -14,7 +14,7 @@ export const RemotionRoot: React.FC = () => {
 				component={LowerThird}
 				durationInFrames={210}
 				fps={30}
-				width={3000}
+				width={3500}
 				height={1080}
 				// You can override these props for each render:
 				// https://www.remotion.dev/docs/parametrized-rendering

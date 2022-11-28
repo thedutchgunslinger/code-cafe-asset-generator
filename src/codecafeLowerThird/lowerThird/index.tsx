@@ -1,7 +1,6 @@
 import React from 'react';
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import {ArrowLeft} from './arrowLeft';
-import {ArrowRight} from './arrowRight';
+import {Comment} from './comment';
 import {Bar} from './bar';
 
 export function LowerThirdAsset() {
@@ -10,13 +9,6 @@ export function LowerThirdAsset() {
 	
 	if(frame < 100){
 
-		const arrowXPositionRight = spring({
-			from: 200,
-			to: 0,
-			frame,
-			fps,
-			config: {mass: 10, damping: 110, stiffness: 300},
-		});
 		const arrowXPositionLeft = spring({
 			from: -200,
 			to: 0,
@@ -34,34 +26,22 @@ export function LowerThirdAsset() {
 		const expand = spring({
 			from: 0,
 			to: 100,
-			frame,
+			frame: frame -10,
 			fps,
 			config: {mass: 10, damping: 110, stiffness: 300},
 		});
 		return (
 			<>
-			<ArrowLeft
+			<Comment
 				transformY={0}
 				transformX={arrowXPositionLeft}
 				opacity={fadeIn}
-				></ArrowLeft>
+				></Comment>
 			<Bar width={expand} opacity={fadeIn} title="Test Title"></Bar>
-			<ArrowRight
-				transformY={0}
-				transformX={arrowXPositionRight}
-				opacity={fadeIn}
-				></ArrowRight>
 		</>
 	);
 }else {
 	frame = frame -180;
-	const arrowXPositionRight = spring({
-			from: 0,
-			to: 200,
-			frame,
-			fps,
-			config: {mass: 10, damping: 110, stiffness: 300},
-		});
 		const arrowXPositionLeft = spring({
 			from: 0,
 			to: -200,
@@ -79,24 +59,19 @@ export function LowerThirdAsset() {
 		const expand = spring({
 			from: 100,
 			to: 0,
-			frame,
+			frame: frame + 10,
 			fps,
 			config: {mass: 10, damping: 110, stiffness: 300},
 		});
 		return (
 			<>
-			<ArrowLeft
-				transformY={0}
-				transformX={arrowXPositionLeft}
-				opacity={fadeIn}
-				></ArrowLeft>
-			<Bar width={expand} opacity={fadeIn} title="Test Title"></Bar>
-			<ArrowRight
-				transformY={0}
-				transformX={arrowXPositionRight}
-				opacity={fadeIn}
-				></ArrowRight>
-		</>
+				<Comment
+					transformY={0}
+					transformX={arrowXPositionLeft}
+					opacity={fadeIn}
+				></Comment>
+				<Bar width={expand} opacity={fadeIn} title="Test Title"></Bar>
+			</>
 		);
 }
 }

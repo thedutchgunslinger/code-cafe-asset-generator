@@ -15,7 +15,7 @@ const Container: any = styled.div`
 
 `;
 const TextBox: any = styled.p`
-    font-size: 15rem;
+    font-size: 25rem;
 	font-family: poppins;
 	color: white;
 	text-decoration: underline solid rgb(116, 61, 251) 2rem;
