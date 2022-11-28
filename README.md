@@ -1,13 +1,7 @@
 # Remotion video
 
 <p align="center">
-  <a href="https://github.com/remotion-dev/logo">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/remotion-dev/logo/raw/main/animated-logo-banner-dark.gif">
-      <img alt="Animated Remotion Logo" src="https://github.com/remotion-dev/logo/raw/main/animated-logo-banner-light.gif">
-    </picture>
-  </a>
-</p>
+
 
 Welcome to your Remotion project!
 
@@ -23,6 +17,15 @@ npm i
 
 ```console
 npm start
+```
+  **pas tekst aan**
+om de tekst aan te passen ga naar 
+```console
+my-video\src\codecafeLowerThird\lowerThird\index.tsx
+```
+hier kan je de tekst aanpasssen op regel 93: 
+```tsx
+<Bar width={expand} opacity={fadeIn} title="Test Title"></Bar>
 ```
 
 **Render video**
