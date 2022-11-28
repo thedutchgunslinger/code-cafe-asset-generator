@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1920 1080" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <rect id="Artboard1" x="0" y="0" width="1920" height="1080" style="fill:none;"/>
+    <g id="Artboard11" serif:id="Artboard1">
+        <g id="logo-codecafe.svg" serif:id="logo codecafe.svg" transform="matrix(1,0,0,1,1376.86,395.575)">
+            <g>
+                <clipPath id="_clip1">
+                    <!-- <rect x="92.668" y="-206.86" width="408.996" height="672.83"/> -->
+                </clipPath>
+                <g clip-path="url(#_clip1)">
+                    <g transform="matrix(1,0,0,1,-513,-493.5)">
+                        <g>
+                            <clipPath id="_clip2">
+                                <rect x="0" y="0" width="1026" height="987"/>
+                            </clipPath>
+                            <g clip-path="url(#_clip2)">
+                                <g id="Artboard12" serif:id="Artboard1" transform="matrix(0.72766,0,0,0.974327,-122.974,-123.988)">
+                                    <rect x="169" y="127.255" width="1410" height="1012.75" style="fill:none;"/>
+                                    <g transform="matrix(-5.72612,0,0,4.27646,28218.7,-18038.3)">
+                                        <path d="M4749,4319L4717,4319L4657.15,4397L4720,4476.85L4749,4476.85L4694,4397L4749,4319Z" style="fill:rgb(11,231,128);"/>
+                                        <path d="M4749,4319L4717,4319L4657.15,4397L4720,4476.85L4749,4476.85L4694,4397L4749,4319ZM4729.71,4329L4721.93,4329C4712.23,4341.65 4681.64,4381.51 4669.82,4396.92C4682.17,4412.62 4714.79,4454.06 4724.86,4466.85L4729.97,4466.85L4685.76,4402.67C4683.39,4399.22 4683.41,4394.66 4685.83,4391.24C4685.83,4391.24 4713.64,4351.79 4729.71,4329Z" style="fill:rgb(11,231,128);"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g id="logo-codecafe.svg1" serif:id="logo codecafe.svg" transform="matrix(1,0,0,1,535.972,397.368)">
+            <g>
+                <clipPath id="_clip3">
+                    <rect x="-503.672" y="-200.361" width="391.701" height="665.652"/>
+                </clipPath>
+                <g clip-path="url(#_clip3)">
+                    <g transform="matrix(1,0,0,1,-513,-493.5)">
+                        <g>
+                            <clipPath id="_clip4">
+                                <rect x="0" y="0" width="1026" height="987"/>
+                            </clipPath>
+                            <g clip-path="url(#_clip4)">
+                                <g id="Artboard13" serif:id="Artboard1" transform="matrix(0.72766,0,0,0.974327,-122.974,-123.988)">
+                                    <rect x="169" y="127.255" width="1410" height="1012.75" style="fill:none;"/>
+                                    <g transform="matrix(5.72612,0,0,4.27646,-26478.9,-18038.3)">
+                                        <path d="M4749,4319L4717,4319L4657.15,4397L4720,4476.85L4749,4476.85L4694,4397L4749,4319Z" style="fill:rgb(11,231,128);"/>
+                                        <path d="M4749,4319L4717,4319L4657.15,4397L4720,4476.85L4749,4476.85L4694,4397L4749,4319ZM4729.71,4329L4685.83,4391.24C4683.41,4394.66 4683.39,4399.22 4685.76,4402.67L4729.97,4466.85L4724.86,4466.85C4724.86,4466.85 4684.03,4414.98 4669.82,4396.92C4669.82,4396.92 4710.43,4343.99 4721.93,4329L4729.71,4329Z" style="fill:rgb(11,231,128);"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(0.5473,0,0,0.5473,426.05,246.146)">
+            <path d="M56.829,1001.62L1848.33,1001.62" style="fill:none;stroke:rgb(116,61,251);stroke-width:62.12px;"/>
+        </g>
+    </g>
+</svg>

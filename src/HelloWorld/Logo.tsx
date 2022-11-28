@@ -60,11 +60,11 @@ export const Logo: React.FC = () => {
 				rotation={90}
 				progress={development}
 			/>
-			<Arc
+			{/* <Arc
 				rotateProgress={rotationDevelopment}
 				rotation={-30}
 				progress={development}
-			/>
+			/> */}
 			<Atom scale={rotationDevelopment} />
 		</AbsoluteFill>
 	);
