@@ -7,14 +7,12 @@ const BackgroundContainer = styled.div`
 	width: 100%;
 	height: 100%;
 	display: flex;
-	flex-diraction: column;
 	justify-content: center;
 	align-items: center;
 `;
 
 const CenteredContainer = styled.div`
 	width: 100%;
-	heigt: 100%;
 	display: flex;
 	align-items: center;
 	color: white;
