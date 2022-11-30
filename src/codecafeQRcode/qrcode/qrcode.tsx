@@ -6,7 +6,7 @@ import QRCode from 'react-qr-code';
 interface QrProps {
 	top: number;
 	opacity: number;
-  url: string;
+	url: string;
 }
 
 const Container: any = styled.div`
@@ -15,20 +15,20 @@ const Container: any = styled.div`
 	justify-content: center;
 	background-color: #0be881;
 	padding: 2rem;
-  padding-bottom: 1rem;
+	padding-bottom: 1rem;
 	border-radius: 20px;
 	flex-direction: column;
-  height: 700px;
-  position: absolute;
-  left: 50%;
-  translate: -50% -50%;
+	height: 700px;
+	position: absolute;
+	left: 50%;
+	translate: -50% -50%;
 `;
 const TextBox: any = styled.p`
 	font-size: 3rem;
 	font-family: poppins;
 	color: white;
 	white-space: nowrap;
-  font-weight: bold;
+	font-weight: bold;
 `;
 
 export function Qrcode(props: QrProps) {

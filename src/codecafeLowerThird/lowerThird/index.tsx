@@ -6,10 +6,11 @@ import {Bar} from './bar';
 export function LowerThirdAsset() {
 	let frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
-	const title = "nieuwe title";
-	
-	if(frame < 100){
+	// variabele voor de tekst
+	const title = 'Zet hier je tekst';
 
+	//start van de animatie
+	if (frame < 100) {
 		const arrowXPositionLeft = spring({
 			from: -200,
 			to: 0,
@@ -27,22 +28,23 @@ export function LowerThirdAsset() {
 		const expand = spring({
 			from: 0,
 			to: 100,
-			frame: frame -10,
+			frame: frame - 10,
 			fps,
 			config: {mass: 10, damping: 110, stiffness: 300},
 		});
 		return (
 			<>
-			<Comment
-				transformY={0}
-				transformX={arrowXPositionLeft}
-				opacity={fadeIn}
+				<Comment
+					transformY={0}
+					transformX={arrowXPositionLeft}
+					opacity={fadeIn}
 				></Comment>
-			<Bar width={expand} opacity={fadeIn} title={title}></Bar>
-		</>
-	);
-}else {
-	frame = frame -180;
+				<Bar width={expand} opacity={fadeIn} title={title}></Bar>
+			</>
+		);
+	} else {
+		// animatie aan het einde
+		frame = frame - 180; //start de animatie aan het einde
 		const arrowXPositionLeft = spring({
 			from: 0,
 			to: -200,
@@ -74,5 +76,5 @@ export function LowerThirdAsset() {
 				<Bar width={expand} opacity={fadeIn} title={title}></Bar>
 			</>
 		);
-}
+	}
 }

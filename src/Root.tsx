@@ -1,8 +1,6 @@
 import {Composition} from 'remotion';
-import {HelloWorld} from './HelloWorld';
-import {Logo} from './HelloWorld/Logo';
-import { LowerThird } from './codecafeLowerThird';
-import { Qrcode } from './codecafeQRcode';
+import {LowerThird} from './codecafeLowerThird';
+import {Qrcode} from './codecafeQRcode';
 // Each <Composition> is an entry in the sidebar!
 
 export const RemotionRoot: React.FC = () => {
@@ -15,7 +13,7 @@ export const RemotionRoot: React.FC = () => {
 				component={LowerThird}
 				durationInFrames={210}
 				fps={30}
-				width={3500}
+				width={4000}
 				height={1080}
 				// You can override these props for each render:
 				// https://www.remotion.dev/docs/parametrized-rendering
