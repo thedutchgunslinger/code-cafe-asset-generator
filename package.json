@@ -4,7 +4,9 @@
 	"description": "My Remotion video",
 	"scripts": {
 		"start": "remotion preview",
-		"build": "remotion render codecafeLowerThird out/video.mp4",
+		"build": "remotion render qrcode out/test.mp4",
+		"lowerThird": "remotion render codecafeLowerThird out/Lower-Third.mp4",
+		"qrCode": "remotion render qrcode out/QR-Code.mp4",
 		"upgrade": "remotion upgrade",
 		"test": "eslint src --ext ts,tsx,js,jsx && tsc"
 	},
@@ -23,6 +25,7 @@
 		"@remotion/cli": "3.3.4",
 		"react": "^18.0.0",
 		"react-dom": "^18.0.0",
+		"react-qr-code": "^2.0.8",
 		"remotion": "3.3.4",
 		"styled-components": "^5.3.6"
 	}

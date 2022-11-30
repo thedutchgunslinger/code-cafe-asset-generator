@@ -6,6 +6,7 @@ import {Bar} from './bar';
 export function LowerThirdAsset() {
 	let frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
+	const title = "nieuwe title";
 	
 	if(frame < 100){
 
@@ -37,7 +38,7 @@ export function LowerThirdAsset() {
 				transformX={arrowXPositionLeft}
 				opacity={fadeIn}
 				></Comment>
-			<Bar width={expand} opacity={fadeIn} title="Test Title"></Bar>
+			<Bar width={expand} opacity={fadeIn} title={title}></Bar>
 		</>
 	);
 }else {
@@ -70,7 +71,7 @@ export function LowerThirdAsset() {
 					transformX={arrowXPositionLeft}
 					opacity={fadeIn}
 				></Comment>
-				<Bar width={expand} opacity={fadeIn} title="Test Title"></Bar>
+				<Bar width={expand} opacity={fadeIn} title={title}></Bar>
 			</>
 		);
 }

@@ -2,6 +2,7 @@ import {Composition} from 'remotion';
 import {HelloWorld} from './HelloWorld';
 import {Logo} from './HelloWorld/Logo';
 import { LowerThird } from './codecafeLowerThird';
+import { Qrcode } from './codecafeQRcode';
 // Each <Composition> is an entry in the sidebar!
 
 export const RemotionRoot: React.FC = () => {
@@ -22,6 +23,14 @@ export const RemotionRoot: React.FC = () => {
 				// 	titleText: 'Welcome to Remotion',
 				// 	titleColor: 'black',
 				// }}
+			/>
+			<Composition
+				id="qrcode"
+				component={Qrcode}
+				durationInFrames={360}
+				height={1080}
+				width={1920}
+				fps={30}
 			/>
 		</>
 	);
