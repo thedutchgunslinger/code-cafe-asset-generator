@@ -1,6 +1,7 @@
 import {Composition} from 'remotion';
 import {LowerThird} from './codecafeLowerThird';
 import {Qrcode} from './codecafeQRcode';
+import {subscriberPercent} from './codecafeSubscriberPercent';
 // Each <Composition> is an entry in the sidebar!
 
 export const RemotionRoot: React.FC = () => {
@@ -25,6 +26,14 @@ export const RemotionRoot: React.FC = () => {
 			<Composition
 				id="qrcode"
 				component={Qrcode}
+				durationInFrames={360}
+				height={1080}
+				width={1920}
+				fps={30}
+			/>
+			<Composition
+				id="subscriberPercent"
+				component={subscriberPercent}
 				durationInFrames={360}
 				height={1080}
 				width={1920}

@@ -8,7 +8,7 @@ async function chooseAsset() {
 		name: 'asset',
 		type: 'list',
 		message: 'kies een asset om te renderen!\n',
-		choices: ['LowerThird', 'QRcode'],
+		choices: ['LowerThird', 'QRcode','SubsciberPercentage'],
 	});
 	return loadAssetOptions(chosenAsset.asset);
 }
@@ -17,13 +17,15 @@ async function loadAssetOptions(asset) {
 		renderLowerThird();
 	} else if (asset === 'QRcode') {
 		renderQrCode();
+	} else if (asset === 'SubsciberPercentage') {
+		renderSubsciberPercentage();
 	}
 }
 async function renderLowerThird() {
 	const text = await inquirer.prompt({
 		name: 'text',
 		type: 'input',
-		message: 'Vul de tekst voor de lowerthird in',
+		message: 'Vul de tekst voor de lowerthird in:',
 	});
 	if (text.text == null || text.text == '') {
 		text.text = 'Test Title';
@@ -34,10 +36,22 @@ async function renderQrCode() {
 	const text = await inquirer.prompt({
 		name: 'url',
 		type: 'input',
-		message: 'Vul de url voor de QRcode in',
+		message: 'Vul de url voor de QRcode in:',
 	});
 	if (text.url == null || text.url == '') {
 		text.url = 'https://discord.com/invite/xwv8ptXUdh';
 	}
 	console.log(text.url);
 }
+async function renderSubsciberPercentage() {
+	const text = await inquirer.prompt({
+		name: 'percent',
+		type: 'input',
+		message: 'Vul het percentage van geabboneerde kijkers in:',
+	});
+	if (text.percent == null || text.percent == '') {
+		text.percent = 75;
+	}
+	console.log(text.percent);
+}
+

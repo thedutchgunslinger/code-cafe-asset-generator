@@ -8,6 +8,7 @@
 		"build": "remotion render qrcode out/test.mp4",
 		"lowerThird": "remotion render codecafeLowerThird out/Lower-Third.mp4",
 		"qrCode": "remotion render qrcode out/QR-Code.mp4",
+		"subPerc": "remotion render subscriberPercent out/Subscriber-Percent.mp4",
 		"upgrade": "remotion upgrade",
 		"test": "eslint src --ext ts,tsx,js,jsx && tsc",
 		"render": "node render.js"
