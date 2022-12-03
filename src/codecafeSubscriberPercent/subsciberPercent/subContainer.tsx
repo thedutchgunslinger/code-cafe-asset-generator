@@ -7,7 +7,8 @@ import {PercentBar} from './percentBar';
 interface QrProps {
 	top: number;
 	opacity: number;
-	percent: number;
+	percentSubscibed: number;
+	percentNotSubscibed: number;
 }
 
 const Container: any = styled.div`
@@ -46,17 +47,16 @@ const SubTitle: any = styled.p`
 
 export function SubContainer(props: QrProps) {
 	const config = useVideoConfig();
-	const {top, opacity, percent} = props;
-	const percentOfNotSubscibed = 100 - percent;
+	const {top, opacity, percentSubscibed, percentNotSubscibed} = props;
 	return (
 		<Container style={{top: `${top}%`, opacity: `${opacity}`}}>
 			<TitleContainer>
 				<Title>Kijk tijd van abbonees</Title>
 				<SubTitle>Percentage van abbonees</SubTitle>
 			</TitleContainer>
-			<PercentBar percent={percent} isSubscribed={true}></PercentBar>
+			<PercentBar percent={percentSubscibed} isSubscribed={true}></PercentBar>
 			<PercentBar
-				percent={percentOfNotSubscibed}
+				percent={percentNotSubscibed}
 				isSubscribed={false}
 			></PercentBar>
 		</Container>

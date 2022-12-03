@@ -7,11 +7,8 @@ export function SubAsset() {
 	const {fps} = useVideoConfig();
 
 	//procent van de kijkers die geabboneerd zijn.
-	const percentageOfSubscibed = 75;
-
-	
-
-	
+	const percentageOfSubscibed = 23;
+	const percentageOfNotSubscibed = 100 - percentageOfSubscibed;
 
 	//voor de start animatie
 	if (frame < 100) {
@@ -29,17 +26,32 @@ export function SubAsset() {
 			fps,
 			config: {mass: 10, damping: 110, stiffness: 300},
 		});
-		const tweenPercent = spring({
+		const tweenPercentSubscibed = spring({
 			from: 0,
 			to: percentageOfSubscibed,
-			frame: frame-30,
+			frame: frame - 30,
 			fps,
 			config: {mass: 10, damping: 110, stiffness: 300},
 		});
-		var roundedTweenPercent = Math.round(tweenPercent * 1) / 1;
+		const tweenPercentNotSubscibed = spring({
+			from: 0,
+			to: percentageOfNotSubscibed,
+			frame: frame - 30,
+			fps,
+			config: {mass: 10, damping: 110, stiffness: 300},
+		});
+		var roundedTweenPercentSubscibed =
+			Math.round(tweenPercentSubscibed * 1) / 1;
+		var roundedTweenPercentNotSubscibed =
+			Math.round(tweenPercentNotSubscibed * 1) / 1;
 		return (
 			<>
-				<SubContainer top={flyInOut} opacity={fadeIn} percent={roundedTweenPercent } />
+				<SubContainer
+					top={flyInOut}
+					opacity={fadeIn}
+					percentSubscibed={roundedTweenPercentSubscibed}
+					percentNotSubscibed={roundedTweenPercentNotSubscibed}
+				/>
 			</>
 		);
 	} else {
@@ -61,7 +73,12 @@ export function SubAsset() {
 		});
 		return (
 			<>
-				<SubContainer top={flyInOut} opacity={fadeIn} percent={percentageOfSubscibed} />
+				<SubContainer
+					top={flyInOut}
+					opacity={fadeIn}
+					percentSubscibed={percentageOfSubscibed}
+					percentNotSubscibed={percentageOfNotSubscibed}
+				/>
 			</>
 		);
 	}
