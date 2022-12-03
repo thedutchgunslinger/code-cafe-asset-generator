@@ -7,7 +7,7 @@ export function SubAsset() {
 	const {fps} = useVideoConfig();
 
 	//procent van de kijkers die geabboneerd zijn.
-	const percentageOfSubscibed = 23;
+	const percentageOfSubscibed = 16;
 	const percentageOfNotSubscibed = 100 - percentageOfSubscibed;
 
 	//voor de start animatie
