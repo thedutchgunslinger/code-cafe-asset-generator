@@ -24,6 +24,10 @@ in de index.tsx bestanden van de mappen ```lowerThird ```, ```qrcode ``` of ```s
 
 ## Render assets
 doormiddel van de custom cli hoef je maar een command te runnen, vanuit daar kan je kiezen welke asset je wilt renderen.
+```console
+npm run render
+```
+
 
 ## Assets
 
