@@ -6,8 +6,17 @@ export function QrAsset() {
 	let frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 
+	const URL = 'http://localhost:3001/qrCodeValue';
+	const [value, setValue] = React.useState('');
+
+	React.useEffect(() => {
+		fetch(URL)
+			.then((response) => response.json())
+			.then((data) => setValue(data.value));
+	}, []);
+
 	//url van de qrcode
-	const qrUrl = 'https://google.com/';
+	const qrUrl = value;
 
 	//voor de start animatie
 	if (frame < 100) {

@@ -2,12 +2,22 @@ import React from 'react';
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {Comment} from './comment';
 import {Bar} from './bar';
+import {QueryClient, QueryClientProvider, useQuery} from 'react-query';
 
 export function LowerThirdAsset() {
 	let frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
-	// variabele voor de tekst
-	const title = 'Zet hier je tekst';
+
+	const URL = 'http://localhost:3001/lowerThirdValue';
+	const [value, setValue] = React.useState('');
+
+	React.useEffect(() => {
+		fetch(URL)
+			.then((response) => response.json())
+			.then((data) => setValue(data.value));
+	}, []);
+
+	let title = value;
 
 	//start van de animatie
 	if (frame < 100) {

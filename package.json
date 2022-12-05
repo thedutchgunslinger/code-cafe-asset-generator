@@ -26,11 +26,15 @@
 	},
 	"dependencies": {
 		"@remotion/cli": "3.3.4",
+		"axios": "^1.2.0",
+		"cors": "^2.8.5",
+		"express": "^4.18.2",
 		"inquirer": "^9.1.4",
 		"nanospinner": "^1.1.0",
 		"react": "^18.0.0",
 		"react-dom": "^18.0.0",
 		"react-qr-code": "^2.0.8",
+		"react-query": "^3.39.2",
 		"remotion": "3.3.4",
 		"styled-components": "^5.3.6"
 	}

@@ -3,6 +3,14 @@ import chalk from 'chalk';
 import inquirer from 'inquirer';
 import {exec} from 'child_process';
 import {createSpinner} from 'nanospinner';
+import express from 'express';
+import cors from 'cors';
+
+const app = express();
+const PORT = 3001;
+
+app.use(cors());
+app.listen(PORT, () => console.log('server gestard'));
 
 console.log(chalk.bgGreenBright.bold('CodeCafé Video Asset Generator'));
 await chooseAsset();
@@ -35,7 +43,11 @@ async function renderLowerThird() {
 	if (text.text == null || text.text == '') {
 		text.text = 'Test Title';
 	}
-	console.log(text.text + ' || helaas nog niet in de video kunnen zetten :(');
+	app.get('/lowerThirdValue', (req, res) => {
+		res.status(200).send({
+			value: text.text,
+		});
+	});
 	const spinner = createSpinner('rendering video asset').start();
 
 	var os = new os_func();
@@ -46,7 +58,9 @@ async function renderLowerThird() {
 				'video is gerendered en hier te vinden: ' +
 				chalk.greenBright('./out/Lower-Third.mp4'),
 		});
+		process.exit(0);
 	});
+	
 }
 
 async function renderQrCode() {
@@ -58,7 +72,11 @@ async function renderQrCode() {
 	if (text.url == null || text.url == '') {
 		text.url = 'https://discord.com/invite/xwv8ptXUdh';
 	}
-	console.log(text.url + ' || helaas nog niet in de video kunnen zetten :(');
+	app.get('/qrCodeValue', (req, res) => {
+		res.status(200).send({
+			value: text.url,
+		});
+	});
 	const spinner = createSpinner('rendering video asset').start();
 
 	var os = new os_func();
@@ -69,6 +87,7 @@ async function renderQrCode() {
 				'video is gerendered en hier te vinden: ' +
 				chalk.greenBright('./out/QR-Code.mp4'),
 		});
+		process.exit(0);
 	});
 }
 
@@ -81,9 +100,11 @@ async function renderSubsciberPercentage() {
 	if (text.percent == null || text.percent == '') {
 		text.percent = 75;
 	}
-	console.log(
-		text.percent + ' || helaas nog niet in de video kunnen zetten :('
-	);
+	app.get('/subPercValue', (req, res) => {
+		res.status(200).send({
+			value: text.percent,
+		});
+	});
 	const spinner = createSpinner('rendering video asset').start();
 
 	var os = new os_func();
@@ -107,5 +128,6 @@ function os_func() {
 
 			callback(stdout);
 		});
+		process.exit(0);
 	};
 }

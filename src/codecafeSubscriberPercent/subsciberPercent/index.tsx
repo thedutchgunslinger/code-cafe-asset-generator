@@ -6,8 +6,17 @@ export function SubAsset() {
 	let frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 
+	const URL = 'http://localhost:3001/subPercValue';
+	const [value, setValue] = React.useState();
+
+	React.useEffect(() => {
+		fetch(URL)
+			.then((response) => response.json())
+			.then((data) => setValue(data.value));
+	}, []);
+
 	//procent van de kijkers die geabboneerd zijn.
-	const percentageOfSubscibed = 16;
+	const percentageOfSubscibed = Number(value);
 	const percentageOfNotSubscibed = 100 - percentageOfSubscibed;
 
 	//voor de start animatie

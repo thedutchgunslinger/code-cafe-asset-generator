@@ -2,6 +2,9 @@ import React from 'react';
 import {Sequence} from 'remotion';
 import styled from 'styled-components';
 import {LowerThirdAsset} from './lowerThird';
+import {QueryClient, QueryClientProvider, useQuery} from 'react-query';
+
+const queryClient = new QueryClient();
 
 const BackgroundContainer = styled.div`
 	width: 100%;
@@ -21,12 +24,14 @@ const CenteredContainer = styled.div`
 
 export function LowerThird() {
 	return (
-		<BackgroundContainer>
-			<Sequence from={0} durationInFrames={210}>
-				<CenteredContainer>
-					<LowerThirdAsset />
-				</CenteredContainer>
-			</Sequence>
-		</BackgroundContainer>
+		<QueryClientProvider client={queryClient}>
+			<BackgroundContainer>
+				<Sequence from={0} durationInFrames={210}>
+					<CenteredContainer>
+						<LowerThirdAsset />
+					</CenteredContainer>
+				</Sequence>
+			</BackgroundContainer>
+		</QueryClientProvider>
 	);
 }

@@ -51,7 +51,7 @@ export function SubContainer(props: QrProps) {
 	return (
 		<Container style={{top: `${top}%`, opacity: `${opacity}`}}>
 			<TitleContainer>
-				<Title>Kijk tijd van abbonees</Title>
+				<Title>Kijktijd van abbonees</Title>
 				<SubTitle>Percentage van abbonees</SubTitle>
 			</TitleContainer>
 			<PercentBar percent={percentSubscibed} isSubscribed={true}></PercentBar>
