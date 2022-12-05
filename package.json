@@ -4,7 +4,8 @@
 	"description": "My Remotion video",
 	"type": "module",
 	"scripts": {
-		"start": "remotion preview",
+		"start": "node render.js",
+		"preview": "remotion preview",
 		"build": "remotion render qrcode out/test.mp4",
 		"lowerThird": "remotion render codecafeLowerThird out/Lower-Third.mp4",
 		"qrCode": "remotion render qrcode out/QR-Code.mp4",
