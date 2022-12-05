@@ -128,6 +128,5 @@ function os_func() {
 
 			callback(stdout);
 		});
-		process.exit(0);
 	};
 }
