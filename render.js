@@ -115,6 +115,7 @@ async function renderSubsciberPercentage() {
 				'video is gerendered en hier te vinden: ' +
 				chalk.greenBright('./out/Subscriber-Percent.mp4'),
 		});
+		process.exit(0);
 	});
 }
 
