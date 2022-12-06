@@ -5,6 +5,7 @@ import {exec} from 'child_process';
 import {createSpinner} from 'nanospinner';
 import express from 'express';
 import cors from 'cors';
+import { resolve } from 'path';
 
 const app = express();
 const PORT = 3001;
@@ -56,7 +57,7 @@ async function renderLowerThird() {
 		spinner.success({
 			text:
 				'video is gerendered en hier te vinden: ' +
-				chalk.greenBright('./out/Lower-Third.mp4'),
+				chalk.greenBright(resolve('./out/Lower-Third.mp4')),
 		});
 		process.exit(0);
 	});
@@ -85,7 +86,7 @@ async function renderQrCode() {
 		spinner.success({
 			text:
 				'video is gerendered en hier te vinden: ' +
-				chalk.greenBright('./out/QR-Code.mp4'),
+				chalk.greenBright(resolve('./out/QR-Code.mp4')),
 		});
 		process.exit(0);
 	});
@@ -113,7 +114,7 @@ async function renderSubsciberPercentage() {
 		spinner.success({
 			text:
 				'video is gerendered en hier te vinden: ' +
-				chalk.greenBright('./out/Subscriber-Percent.mp4'),
+				chalk.greenBright(resolve('./out/Subscriber-Percent.mp4')),
 		});
 		process.exit(0);
 	});
