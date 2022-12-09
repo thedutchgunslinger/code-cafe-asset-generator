@@ -20,7 +20,7 @@ async function chooseAsset() {
 		name: 'asset',
 		type: 'list',
 		message: 'kies een asset om te renderen!\n',
-		choices: ['LowerThird', 'QRcode', 'SubsciberPercentage'],
+		choices: ['LowerThird', 'QRcode', 'SubsciberPercentage', 'TitleCard'],
 	});
 	return loadAssetOptions(chosenAsset.asset);
 }
@@ -32,6 +32,8 @@ async function loadAssetOptions(asset) {
 		renderQrCode();
 	} else if (asset === 'SubsciberPercentage') {
 		renderSubsciberPercentage();
+	} else if (asset === 'TitleCard') {
+		renderTitleCard();
 	}
 }
 
@@ -119,6 +121,60 @@ async function renderSubsciberPercentage() {
 		process.exit(0);
 	});
 }
+
+async function renderTitleCard() {
+	const text = await inquirer.prompt({
+		name: 'text',
+		type: 'input',
+		message: 'Vul de tekst voor de lowerthird in:',
+	});
+	if (text.text == null || text.text == '') {
+		text.text = 'Test Title';
+	}
+	app.get('/titleCard', (req, res) => {
+		res.status(200).send({
+			value: text.text,
+		});
+	});
+	const chosenAsset = await inquirer.prompt({
+		name: 'asset',
+		type: 'list',
+		message: 'kies een asset om te renderen!\n',
+		choices: ['Landscape', 'Portraite'],
+	});
+
+	if(chosenAsset.asset == 'Landscape'){
+		const spinner = createSpinner('rendering video asset').start();
+
+		var os = new os_func();
+
+		os.execCommand('npm run titleCardLandscape', function () {
+			spinner.success({
+				text:
+					'video is gerendered en hier te vinden: ' +
+					chalk.greenBright(resolve('./out/Title-Card-Landscape.mp4')),
+			});
+			process.exit(0);
+		});
+	} else {
+		const spinner = createSpinner('rendering video asset').start();
+
+		var os = new os_func();
+
+		os.execCommand('npm run titleCardPortrait', function () {
+			spinner.success({
+				text:
+					'video is gerendered en hier te vinden: ' +
+					chalk.greenBright(resolve('./out/Title-Card-Portrait.mp4')),
+			});
+			process.exit(0);
+		});
+	}
+
+
+	
+}
+
 
 function os_func() {
 	this.execCommand = function (cmd, callback) {

@@ -8,6 +8,8 @@
 		"preview": "remotion preview",
 		"build": "remotion render qrcode out/test.mp4",
 		"lowerThird": "remotion render codecafeLowerThird out/Lower-Third.mp4",
+		"titleCardLandscape": "remotion render titleCard out/Title-Card-Landscape.mp4",
+		"titleCardPortrait": "remotion render titleCardPortrait out/Title-Card-Portrait.mp4",
 		"qrCode": "remotion render qrcode out/QR-Code.mp4",
 		"subPerc": "remotion render subscriberPercent out/Subscriber-Percent.mp4",
 		"upgrade": "remotion upgrade",
