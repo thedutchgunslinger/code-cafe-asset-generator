@@ -6,6 +6,7 @@
 	"scripts": {
 		"start": "node render.js",
 		"preview": "remotion preview",
+		"dev": "node dev.js",
 		"build": "remotion render qrcode out/test.mp4",
 		"lowerThird": "remotion render codecafeLowerThird out/Lower-Third.mp4",
 		"titleCardLandscape": "remotion render titleCard out/Title-Card-Landscape.mp4",
