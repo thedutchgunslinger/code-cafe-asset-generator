@@ -2,6 +2,12 @@ import React from 'react';
 import {useVideoConfig} from 'remotion';
 import styled from 'styled-components';
 import QRCode from 'react-qr-code';
+import {
+	primaryColor,
+	secondaryColor,
+	textColor,
+	fontFamily,
+} from './../../assets/constants';
 
 interface QrProps {
 	top: number;
@@ -13,7 +19,7 @@ const Container: any = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: #0be881;
+	background-color: ${primaryColor};
 	padding: 2rem;
 	padding-bottom: 1rem;
 	border-radius: 20px;
@@ -25,8 +31,8 @@ const Container: any = styled.div`
 `;
 const TextBox: any = styled.p`
 	font-size: 3rem;
-	font-family: poppins;
-	color: white;
+	font-family: ${fontFamily};
+	color: ${textColor};
 	white-space: nowrap;
 	font-weight: bold;
 `;
@@ -42,7 +48,7 @@ export function Qrcode(props: QrProps) {
 				style={{height: 'auto', maxWidth: '100%', width: '100%'}}
 				value={url}
 				viewBox={`0 0 500 500`}
-				fgColor="#743dfb"
+				fgColor={secondaryColor}
 			/>
 			<TextBox>Scan me!</TextBox>
 		</Container>

@@ -3,6 +3,9 @@ import {Sequence} from 'remotion';
 import styled from 'styled-components';
 import {LowerThirdAsset} from './lowerThird';
 import {QueryClient, QueryClientProvider, useQuery} from 'react-query';
+import {
+	textColor
+} from './../assets/constants';
 
 const queryClient = new QueryClient();
 
@@ -18,7 +21,7 @@ const CenteredContainer = styled.div`
 	width: 100%;
 	display: flex;
 	align-items: center;
-	color: white;
+	color: ${textColor};
 	justify-content: center;
 `;
 

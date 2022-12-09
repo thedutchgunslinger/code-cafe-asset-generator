@@ -26,9 +26,14 @@ hierna vraagt die welke asset je wilt renderen, als je je asset gekozen hebt vra
 ![QR code graphic](src/assets/qrcode.gif)
 ### Subsciber percent
 ![Subsciber percentage graphic](src/assets/subsciberPercent.gif)
+### Title card
+#### Landscape/Desktop
+![title card animation](src/assets/titlecardlandscape.gif)
+#### Portrait/Mobile
+![title card animation](src/assets/titlecardportrait.gif)
 ### Intro
 todo
-## Outro landscape
+### Outro landscape
 todo
-### Outro potrait 
+### Outro portrait 
 todo

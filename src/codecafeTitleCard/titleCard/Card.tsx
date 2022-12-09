@@ -2,7 +2,7 @@ import React from 'react';
 import {useVideoConfig} from 'remotion';
 import styled from 'styled-components';
 import QRCode from 'react-qr-code';
-import {primaryColor, secondaryColor} from './../../assets/constants';
+import {primaryColor, secondaryColor, fontFamily} from './../../assets/constants';
 import {Title} from './Title'
 
 interface QrProps {
@@ -28,7 +28,7 @@ const Container: any = styled.div`
 `;
 const TextBox: any = styled.p`
 	font-size: 4rem;
-	font-family: poppins;
+	font-family: ${fontFamily};
 	color: ${secondaryColor};
 	font-weight: bold;
 	max-width: 800px;

@@ -1,6 +1,12 @@
 import React from 'react';
 import {useVideoConfig} from 'remotion';
 import styled from 'styled-components';
+import {
+	primaryColor,
+	secondaryColor,
+	textColor,
+	fontFamily,
+} from './../../assets/constants';
 
 interface percentBarProps {
 	percent: number;
@@ -16,7 +22,7 @@ const Meter: any = styled.div`
 	height: 20px;
 	width: 100%;
 	position: relative;
-	background: #0be881;
+	background: ${primaryColor};
 	border-radius: 25px;
 	padding: 10px 0;
 	margin: 0 2rem;
@@ -26,15 +32,15 @@ const InnerBar: any = styled.span`
 	display: block;
 	height: 30px;
   border-radius: 20px;
-	background-color: #743dfb;
+	background-color: ${secondaryColor};
 	margin-top: -1rem;
 	position: relative;
 	overflow: hidden;
   transition: all 10ms linear;
 `;
 const Text: any = styled.p`
-  font-family: poppins;
-  color: white;
+  font-family: ${fontFamily};
+  color: ${textColor};
   font-size: 2rem;
   white-space: nowrap;
 `;
@@ -42,7 +48,7 @@ const Text: any = styled.p`
 export function PercentBar(props: percentBarProps) {
 	const config = useVideoConfig();
 	const {percent, isSubscribed} = props;
-  const legendHide = isSubscribed ? '#0be881' : 'White';
+  const legendHide = isSubscribed ? primaryColor : textColor;
 
 	return (
 		// style={{top: `${top}%`, opacity: `${opacity}`}}

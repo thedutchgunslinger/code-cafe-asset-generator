@@ -42,7 +42,7 @@ export function CardAsset() {
 		);
 	} else {
 		// om ervoor te zorgen dat die ook terug animeert
-		frame = frame - 330; // hierdoor start de animatie op het einde
+		frame = frame - 120; // hierdoor start de animatie op het einde
 		const flyInOut = spring({
 			from: 100,
 			to: 0,

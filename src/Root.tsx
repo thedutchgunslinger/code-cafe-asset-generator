@@ -44,7 +44,7 @@ export const RemotionRoot: React.FC = () => {
 			<Composition
 				id="titleCard"
 				component={TitleCard}
-				durationInFrames={360}
+				durationInFrames={150}
 				height={1080}
 				width={1920}
 				fps={30}
@@ -52,7 +52,7 @@ export const RemotionRoot: React.FC = () => {
 			<Composition
 				id="titleCardPortrait"
 				component={TitleCardPortrait}
-				durationInFrames={360}
+				durationInFrames={150}
 				height={1920}
 				width={1080}
 				fps={30}

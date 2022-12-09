@@ -2,6 +2,11 @@ import React from 'react';
 import {useVideoConfig} from 'remotion';
 import styled from 'styled-components';
 import {PercentBar} from './percentBar';
+import {
+	primaryColor,
+	secondaryColor,
+	fontFamily,
+} from './../../assets/constants';
 
 
 interface QrProps {
@@ -15,7 +20,7 @@ const Container: any = styled.div`
 	display: flex;
 	/* align-items: center; */
 	justify-content: flex-start;
-	background-color: #0be881;
+	background-color: ${primaryColor};
 	padding: 2rem;
 	padding-bottom: 1rem;
 	border-radius: 20px;
@@ -33,8 +38,8 @@ const TitleContainer: any = styled.p`
 const Title: any = styled.p`
 	font-size: 4rem;
 	font-weight: bold;
-	font-family: poppins;
-	color: #743dfb;
+	font-family: ${fontFamily};
+	color: ${secondaryColor};
 	margin: 0;
 `;
 

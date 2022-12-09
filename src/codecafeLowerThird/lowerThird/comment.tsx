@@ -1,6 +1,9 @@
 import React from 'react';
 import {useVideoConfig} from 'remotion';
 import styled from 'styled-components';
+import {
+	primaryColor
+} from './../../assets/constants';
 
 interface commentProps {
 	transformY: number;
@@ -82,7 +85,7 @@ export function Comment(props: commentProps) {
 														<g transform="matrix(5.72612,0,0,4.27646,-26478.9,-18038.3)">
 															<path
 																d="M4749,4319L4717,4319L4686.16,4397.78L4657.13,4476.85L4686.13,4476.85L4718,4397L4749,4319Z"
-																fill="rgb(11,231,128)"
+																fill={primaryColor}
 															/>
 														</g>
 													</g>
@@ -95,7 +98,7 @@ export function Comment(props: commentProps) {
 							<g transform="matrix(4.16667,0,0,4.16667,-19169.6,-17829.1)">
 								<path
 									d="M4749,4319L4717,4319L4686.16,4397.78L4657.13,4476.85L4686.13,4476.85L4718,4397L4749,4319Z"
-									fill="rgb(11,231,128)"
+									fill={primaryColor}
 								/>
 							</g>
 						</g>

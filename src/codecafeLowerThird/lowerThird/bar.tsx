@@ -1,6 +1,11 @@
 import React from 'react';
 import {useVideoConfig} from 'remotion';
 import styled from 'styled-components';
+import {
+	textColor,
+	secondaryColor,
+	fontFamily,
+} from './../../assets/constants';
 
 interface BarProps {
 	width: number;
@@ -15,9 +20,9 @@ const Container: any = styled.div`
 `;
 const TextBox: any = styled.p`
 	font-size: 25rem;
-	font-family: poppins;
-	color: white;
-	text-decoration: underline solid rgb(116, 61, 251) 2rem;
+	font-family: ${fontFamily};
+	color: ${textColor};
+	text-decoration: underline solid ${secondaryColor} 2rem;
 	white-space: nowrap;
 `;
 

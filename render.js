@@ -140,7 +140,7 @@ async function renderTitleCard() {
 		name: 'asset',
 		type: 'list',
 		message: 'kies een asset om te renderen!\n',
-		choices: ['Landscape', 'Portraite'],
+		choices: ['Landscape', 'Portrait'],
 	});
 
 	if(chosenAsset.asset == 'Landscape'){
