@@ -20,7 +20,7 @@ async function chooseAsset() {
 		name: 'asset',
 		type: 'list',
 		message: 'kies een asset om te renderen!\n',
-		choices: ['LowerThird', 'QRcode', 'SubsciberPercentage', 'TitleCard'],
+		choices: ['LowerThird','Outro','TitleCard', 'QRcode', 'SubsciberPercentage'],
 	});
 	return loadAssetOptions(chosenAsset.asset);
 }
@@ -34,6 +34,8 @@ async function loadAssetOptions(asset) {
 		renderSubsciberPercentage();
 	} else if (asset === 'TitleCard') {
 		renderTitleCard();
+	} else if (asset === 'Outro') {
+		renderOutro();
 	}
 }
 
@@ -170,9 +172,42 @@ async function renderTitleCard() {
 			process.exit(0);
 		});
 	}
+}
+async function renderOutro() {
+	const chosenAsset = await inquirer.prompt({
+		name: 'asset',
+		type: 'list',
+		message: 'kies een asset om te renderen!\n',
+		choices: ['Landscape', 'Portrait'],
+	});
 
+	if (chosenAsset.asset == 'Landscape') {
+		const spinner = createSpinner('rendering video asset').start();
 
-	
+		var os = new os_func();
+
+		os.execCommand('npm run outro', function () {
+			spinner.success({
+				text:
+					'video is gerendered en hier te vinden: ' +
+					chalk.greenBright(resolve('./out/Outro.mp4')),
+			});
+			process.exit(0);
+		});
+	} else {
+		const spinner = createSpinner('rendering video asset').start();
+
+		var os = new os_func();
+
+		os.execCommand('npm run outroPortrait', function () {
+			spinner.success({
+				text:
+					'video is gerendered en hier te vinden: ' +
+					chalk.greenBright(resolve('./out/Outro-Portrait.mp4')),
+			});
+			process.exit(0);
+		});
+	}
 }
 
 

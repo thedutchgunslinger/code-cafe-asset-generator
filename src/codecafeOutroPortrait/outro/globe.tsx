@@ -1,7 +1,7 @@
 import React from 'react';
 import {useVideoConfig} from 'remotion';
 import styled from 'styled-components';
-import {primaryColor, secondaryColor} from './../../assets/constants';
+import {primaryColor, secondaryColor} from '../../assets/constants';
 
 const Container = styled.div`
 	width: 50px;

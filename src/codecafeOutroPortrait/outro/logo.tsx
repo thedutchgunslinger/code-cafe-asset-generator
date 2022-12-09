@@ -1,13 +1,15 @@
 import React from 'react';
 import {useVideoConfig} from 'remotion';
 import styled from 'styled-components';
-import {primaryColor, secondaryColor} from './../../assets/constants';
+import {primaryColor, secondaryColor} from '../../assets/constants';
 
 interface logoProps {
 	fadeIn: number;
 }
 
-const Container: any = styled.div``;
+const Container: any = styled.div`
+	/* align-self: center; */
+`;
 
 export function Logo(props: logoProps) {
 	const {fadeIn} = props;
@@ -16,8 +18,8 @@ export function Logo(props: logoProps) {
 	return (
 		<Container style={{scale: `${fadeIn}`}}>
 			<svg
-				width="100%"
-				height="100%"
+				width="80%"
+				height="80%"
 				viewBox="0 0 1026 987"
 				version="1.1"
 				xmlns="http://www.w3.org/2000/svg"

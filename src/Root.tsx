@@ -5,6 +5,7 @@ import {subscriberPercent} from './codecafeSubscriberPercent';
 import {TitleCard} from './codecafeTitleCard';
 import {TitleCardPortrait} from './codecafeTitleCardPortrait';
 import {Outro} from './codecafeOutro';
+import {OutroPortrait} from './codecafeOutroPortrait'
 // Each <Composition> is an entry in the sidebar!
 
 export const RemotionRoot: React.FC = () => {
@@ -64,6 +65,14 @@ export const RemotionRoot: React.FC = () => {
 				durationInFrames={600}
 				height={1080}
 				width={1920}
+				fps={30}
+			/>
+			<Composition
+				id="outroPortrait"
+				component={OutroPortrait}
+				durationInFrames={120}
+				height={1920}
+				width={1080}
 				fps={30}
 			/>
 		</>

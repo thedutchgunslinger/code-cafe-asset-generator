@@ -24,7 +24,7 @@ interface QrProps {
 
 const Container: any = styled.div`
 	display: flex;
-	justify-content: flex-start;
+	justify-content: space-between;
 	background-color: ${primaryColor};
 	padding: 4rem;
 	flex-direction: column;
@@ -34,44 +34,33 @@ const Container: any = styled.div`
 `;
 
 const Header: any = styled.div`
+position: absolute;
+top: 50%;
+translate: 0 -50%;
 	display: flex;
-	height: 200px;
+	justify-self: center;
 `;
 const Footer: any = styled.div`
 	display: flex;
-	height: 200px;
-	gap: 2rem;
-	align-items: flex-end;
-	margin-left: 3rem;
+	align-items: flex-start;
+	justify-content: flex-end;
+	flex-direction: column;
+	position: absolute;
+	bottom: 1rem;
 `;
 const TextBox: any = styled.p`
 	font-size: 2.5rem;
 	font-family: ${fontFamily};
 	color: ${secondaryColor};
 	font-weight: bold;
-`;
 
-const CTA: any = styled.div`
-	height: 600px;
-	width: 100%;
-	display: flex;
-	align-items: flex-end;
-	justify-content: space-evenly;
-`;
-const CTAText: any = styled.p`
-	color: ${textColor};
-	font-size: 2rem;
-	width: 100%;
-	text-align: center;
-	font-family: ${fontFamily};
-	font-weight: bold;
-	align-items: center;
 `;
 
 const FooterText: any = styled.p`
 	color: ${textColor};
 	font-family: ${fontFamily};
-	font-size: 2rem;
+	font-size: 2.5rem;
+
 `;
 
 export function Card(props: QrProps) {
@@ -87,11 +76,6 @@ export function Card(props: QrProps) {
 					<Title titleText={title} titleColor={'#ffffff'} />
 				</TextBox>
 			</Header>
-			<CTA style={{scale: `${fadeInContentBox}`}}>
-				<CTAText>Mischien ook leuk</CTAText>
-				<CTAText>Abboneer</CTAText>
-				<CTAText>Vorige video</CTAText>
-			</CTA>
 			<Footer style={{scale: `${fadeInFooter}`}}>
 				<FooterText>
 					<Discord /> https://discord.com/invite/xwv8ptXUdh

@@ -31,9 +31,10 @@ hierna vraagt die welke asset je wilt renderen, als je je asset gekozen hebt vra
 ![title card animation](src/assets/titlecardlandscape.gif)
 #### Portrait/Mobile
 ![title card animation](src/assets/titlecardportrait.gif)
+### Outro 
+#### Landscape/Desktop
+![outro animatie](src/assets/outro.gif)
+#### Portrait/Mobile
+![outro animation](src/assets/outroPortrait.gif)
 ### Intro
-todo
-### Outro landscape
-todo
-### Outro portrait 
 todo

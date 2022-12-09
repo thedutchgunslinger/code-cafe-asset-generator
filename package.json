@@ -6,11 +6,12 @@
 	"scripts": {
 		"start": "node render.js",
 		"preview": "remotion preview",
-		"dev": "node dev.js",
 		"build": "remotion render qrcode out/test.mp4",
 		"lowerThird": "remotion render codecafeLowerThird out/Lower-Third.mp4",
 		"titleCardLandscape": "remotion render titleCard out/Title-Card-Landscape.mp4",
 		"titleCardPortrait": "remotion render titleCardPortrait out/Title-Card-Portrait.mp4",
+		"outro": "remotion render outro out/Outro.mp4",
+		"outroPortrait": "remotion render outroPortrait out/Outro-Portrait.mp4",
 		"qrCode": "remotion render qrcode out/QR-Code.mp4",
 		"subPerc": "remotion render subscriberPercent out/Subscriber-Percent.mp4",
 		"upgrade": "remotion upgrade",
